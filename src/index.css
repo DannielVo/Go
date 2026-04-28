@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+/* =========================================
+   TAILWIND THEME (v4)
+========================================= */
+@theme {
+  --color-primary: #5170ff;
+  --color-hover: #627efe;
+  --color-background-dark: #121c22;
+  --color-background-light: #f5f7f8;
+  --color-background-gray: #f1f5f9;
+  --color-success: #4bd669;
+  --color-error: #f06262;
+  --color-sidebar-dark: #19282e;
+  --color-surface-dark: #1c2136;
+  --color-border-dark: #232948;
+  --color-text-secondary: #abb4c0;
+
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+}
+
+/* =========================================
+   BASE STYLES
+========================================= */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background-light text-slate-800 font-body antialiased;
+  }
+}
+
+/* =========================================
+   UTILITIES (OPTIONAL)
+========================================= */
+@layer utilities {
+  .bg-surface {
+    @apply bg-surface-dark;
+  }
+
+  .text-muted {
+    @apply text-text-secondary;
+  }
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f7f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #5170ff;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #627efe;
+}
+
+/* =========================================
+   HERO PATTERN
+========================================= */
+.hero-pattern {
+  background-image: radial-gradient(#232948 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+/* TOAST NOTIFICATION ANIMATION */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* custom class dùng chung */
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+  will-change: transform, opacity;
+}
+
+/* HIDE ICON OF PASSWORD INPUT */
+/* Remove default password eye icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
