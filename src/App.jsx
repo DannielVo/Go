@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "../../../Final/flashup/client/src/pages/auth/Login";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/home/Home";
 import Products from "./pages/home/Products";
 import ProductDetail from "./pages/home/ProductDetail";
 import NotFound from "../../../Final/flashup/client/src/pages/404/NotFound";
+import Login from "./pages/auth/Login";
 
 const App = () => {
   return (
