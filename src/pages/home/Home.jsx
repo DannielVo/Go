@@ -6,8 +6,8 @@ const Home = () => {
       <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
         Welcome back to Go!
         <br />
-        <span className="text-cyan-500 text-6xl md:text-5xl">
-          Smart Views. Better Decisions.
+        <span className="text-cyan-500 text-2xl md:text-5xl">
+          Smart Views - Better Decisions
         </span>
       </h1>
     </div>
