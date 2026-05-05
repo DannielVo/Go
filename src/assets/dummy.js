@@ -5,7 +5,7 @@ export const PRODUCTS_LIST = [
     price: "$210",
     description: "Comfortable cotton t-shirt for everyday wear.",
     category: "men",
-    image: "https://fugina.netlify.app/assets/p_img4-CYIvCkUm.png",
+    image: "https://fugina.netlify.app/assets/p_img11-BSX5z8O8.png",
     rating: {
       rate: 4.2,
       count: 120,

@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 import { PRODUCTS_LIST } from "../../assets/dummy";
 import ProductCard from "../../components/ProductCard";
+import { CATEGORIES } from "../../assets/assets";
 
 const Products = () => {
   const [sortType, setSortType] = useState("default");
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
   const parsePrice = (price) => {
     return Number(price.replace("$", ""));
   };
 
-  const sortedProducts = [...PRODUCTS_LIST];
+  const handleCategoryChange = (category) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category],
+    );
+  };
+
+  let filteredProducts = [...PRODUCTS_LIST];
+
+  if (selectedCategories.length > 0) {
+    filteredProducts = filteredProducts.filter((product) =>
+      selectedCategories.includes(product.category),
+    );
+  }
 
   if (sortType === "low") {
-    sortedProducts.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    filteredProducts.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
   } else if (sortType === "high") {
-    sortedProducts.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    filteredProducts.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
   }
 
   return (
     <div className="flex flex-col lg:flex-row gap-12 w-full">
-      {/* <!-- Left Sidebar: Filters --> */}
+      {/* <!-- Filters --> */}
       <aside className="w-full lg:w-64 shrink-0">
         <div className="top-25 mt-3">
           <h2 className="font-label-caps text-label-caps text-on-surface mb-8 tracking-widest">
@@ -30,40 +46,29 @@ const Products = () => {
               Categories
             </h3>
             <div className="space-y-3">
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input
-                  className="w-4 h-4 rounded border-outline text-primary focus:ring-primary custom-checkbox"
-                  type="checkbox"
-                />
-                <span className="font-body-sm text-secondary group-hover:text-on-surface transition-colors">
-                  Men
-                </span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input
-                  className="w-4 h-4 rounded border-outline text-primary focus:ring-primary custom-checkbox"
-                  type="checkbox"
-                />
-                <span className="font-body-sm text-secondary group-hover:text-on-surface transition-colors">
-                  Women
-                </span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input
-                  className="w-4 h-4 rounded border-outline text-primary focus:ring-primary custom-checkbox"
-                  type="checkbox"
-                />
-                <span className="font-body-sm text-secondary group-hover:text-on-surface transition-colors">
-                  Kids
-                </span>
-              </label>
+              {CATEGORIES.map((cat) => (
+                <label
+                  key={cat}
+                  className="flex items-center gap-3 cursor-pointer group"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes(cat)}
+                    onChange={() => handleCategoryChange(cat)}
+                    className="w-4 h-4"
+                  />
+                  <span className="text-slate-600 group-hover:text-black capitalize">
+                    {cat}
+                  </span>
+                </label>
+              ))}
             </div>
           </div>
         </div>
       </aside>
-      {/* <!-- Main Content Area --> */}
+
+      {/* <!-- Main Content --> */}
       <div className="grow">
-        {/* <!-- Top Bar --> */}
         <div className="flex justify-between items-center pb-3 border-outline-variant">
           <h1 className="font-label-caps text-label-caps text-on-surface tracking-widest text-xl">
             ALL PRODUCTS
@@ -85,9 +90,15 @@ const Products = () => {
 
         {/* <!-- Product List --> */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
-          {sortedProducts.map((product, index) => (
-            <ProductCard key={`product-${product.id}`} product={product} />
-          ))}
+          {filteredProducts.length === 0 ? (
+            <p className="text-center text-slate-500 mt-10 col-span-full">
+              No products found
+            </p>
+          ) : (
+            filteredProducts.map((product) => (
+              <ProductCard key={`product-${product.id}`} product={product} />
+            ))
+          )}
         </div>
       </div>
     </div>
