@@ -4,9 +4,9 @@ import ProductCard from "../../components/ProductCard";
 
 const Products = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-12 w-full">
+    <div className="flex flex-col lg:flex-row gap-12 w-full">
       {/* <!-- Left Sidebar: Filters --> */}
-      <aside className="w-full md:w-64 shrink-0">
+      <aside className="w-full lg:w-64 shrink-0">
         <div className="top-25 mt-3">
           <h2 className="font-label-caps text-label-caps text-on-surface mb-8 tracking-widest">
             FILTERS
@@ -66,7 +66,7 @@ const Products = () => {
         </div>
 
         {/* <!-- Product List --> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-items-center">
           {PRODUCTS_LIST.map((product, index) => (
             <ProductCard key={`product-${product.id}`} product={product} />
           ))}

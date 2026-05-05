@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="group rounded-xl product-card-shadow transition-all duration-300 overflow-hidden flex flex-col w-[300px]">
+    <div className="group rounded-xl product-card-shadow transition-all duration-300 overflow-hidden flex flex-col max-w-68 cursor-pointer">
       <div className="flex items-center justify-center bg-surface-container p-4">
         <img
           alt={product.title}
