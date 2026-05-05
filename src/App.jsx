@@ -6,6 +6,8 @@ import Products from "./pages/home/Products";
 import ProductDetail from "./pages/home/ProductDetail";
 import NotFound from "../../../Final/flashup/client/src/pages/404/NotFound";
 import Login from "./pages/auth/Login";
+import Admin from "./pages/admin/Admin";
+import AdminProducts from "./pages/admin/AdminProducts";
 
 const App = () => {
   return (
@@ -16,8 +18,8 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<ProductDetail />} />
-        {/* <Route path="admin" element={<Admin />} />
-      <Route path="admin/products" element={<AdminProducts />} /> */}
+        <Route path="admin" element={<Admin />} />
+        <Route path="admin/products" element={<AdminProducts />} />
       </Route>
 
       {/* 404 */}
