@@ -1,3 +1,3 @@
-import mainLogo from "./Go_Logo.png";
+import mainLogo from "./Go_cut.png";
 
 export const assets = { mainLogo };
