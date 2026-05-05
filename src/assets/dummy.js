@@ -2,7 +2,7 @@ export const PRODUCTS_LIST = [
   {
     id: 1,
     title: "Men Casual T-Shirt",
-    price: "$19.99",
+    price: "$210",
     description: "Comfortable cotton t-shirt for everyday wear.",
     category: "men",
     image: "https://fugina.netlify.app/assets/p_img4-CYIvCkUm.png",
@@ -14,7 +14,7 @@ export const PRODUCTS_LIST = [
   {
     id: 2,
     title: "Women Summer Dress",
-    price: "$29.99",
+    price: "$100",
     description: "Lightweight floral dress perfect for summer outings.",
     category: "women",
     image: "https://fugina.netlify.app/assets/p_img1-BTuXznJl.png",
@@ -26,7 +26,7 @@ export const PRODUCTS_LIST = [
   {
     id: 3,
     title: "Boy Round Neck Pure Cotton T-shirt",
-    price: "$24.5",
+    price: "$188",
     description: "Warm and cozy hoodie for kids.",
     category: "kids",
     image: "https://fugina.netlify.app/assets/p_img24-DxfyHMhA.png",
@@ -38,7 +38,7 @@ export const PRODUCTS_LIST = [
   {
     id: 4,
     title: "Men Denim Jacket",
-    price: "$49.99",
+    price: "$145",
     description: "Stylish denim jacket with a modern fit.",
     category: "men",
     image: "https://fugina.netlify.app/assets/p_img48-DwPRHR8_.png",
@@ -50,7 +50,7 @@ export const PRODUCTS_LIST = [
   {
     id: 5,
     title: "Women Blouse",
-    price: "$22",
+    price: "$160",
     description: "Elegant blouse suitable for office and casual wear.",
     category: "women",
     image: "https://fugina.netlify.app/assets/p_img44-CwJd8P6L.png",
@@ -62,7 +62,7 @@ export const PRODUCTS_LIST = [
   {
     id: 6,
     title: "Kids Jeans",
-    price: "$27.0",
+    price: "$110",
     description: "Durable and comfortable jeans for active kids.",
     category: "kids",
     image: "https://fugina.netlify.app/assets/p_img43-CXKL7sau.png",
@@ -74,7 +74,7 @@ export const PRODUCTS_LIST = [
   {
     id: 7,
     title: "Men Formal Shirt",
-    price: "$35.5",
+    price: "$190",
     description: "Classic formal shirt for business occasions.",
     category: "men",
     image: "https://fugina.netlify.app/assets/p_img41-lMY0mPgt.png",
@@ -86,7 +86,7 @@ export const PRODUCTS_LIST = [
   {
     id: 8,
     title: "Women Jacket",
-    price: "$55.0",
+    price: "$220",
     description: "Trendy jacket for chilly weather.",
     category: "women",
     image: "https://fugina.netlify.app/assets/p_img21-BhDxXaVk.png",
@@ -98,7 +98,7 @@ export const PRODUCTS_LIST = [
   {
     id: 9,
     title: "Boy Round Neck Pure Cotton T-shirt",
-    price: "$18.9",
+    price: "$80",
     description: "Pack of 3 colorful t-shirts for kids.",
     category: "kids",
     image: "https://fugina.netlify.app/assets/p_img14-3-oykRil.png",
@@ -110,7 +110,7 @@ export const PRODUCTS_LIST = [
   {
     id: 10,
     title: "Men Sports Shorts",
-    price: "$21.9",
+    price: "$150",
     description: "Breathable shorts designed for sports activities.",
     category: "men",
     image: "https://fugina.netlify.app/assets/p_img4-CYIvCkUm.png",

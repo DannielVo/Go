@@ -66,7 +66,7 @@ const Products = () => {
         </div>
 
         {/* <!-- Product List --> */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
           {PRODUCTS_LIST.map((product, index) => (
             <ProductCard key={`product-${product.id}`} product={product} />
           ))}
