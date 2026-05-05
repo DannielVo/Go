@@ -63,11 +63,11 @@
   background: #f5f7f8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #5170ff;
+  background: #0097b2;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #627efe;
+  background: #17b3cf;
 }
 
 /* =========================================

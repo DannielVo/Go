@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center w-full px-8 py-4 bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200 shrink-0">
+      <div className="flex justify-between items-center w-full px-10 py-4 bg-white sticky top-0 z-50 shadow-sm border-b border-slate-200 shrink-0">
         <div className="flex items-center gap-8">
           <img
             src={assets.mainLogo}
